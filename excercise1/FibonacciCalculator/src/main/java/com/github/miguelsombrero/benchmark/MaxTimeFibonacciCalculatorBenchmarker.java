@@ -18,13 +18,13 @@ public class MaxTimeFibonacciCalculatorBenchmarker implements FibonacciCalculato
 
         for (int i = 2 ;; i++) {
             previousFibonacciNumber = fibonacciNumber;
+            fibonacciNumber = calculator.calculate(i);
 
             if (maxTimeExceeded(start, MAX_TIME_MILLISECONDS)) {
                 System.out.println("Fibonacci calculator exits at time " + runningTime(start));
                 System.out.println("Last calculated Fibonacci number with n = " + (i-1) + " is " + previousFibonacciNumber);
                 return (i-1);
             }
-            fibonacciNumber = calculator.calculate(i);
         }
     }
 
