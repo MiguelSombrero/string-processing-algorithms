@@ -41,5 +41,9 @@ public class FibonacciCalculatorTest {
         assertEquals(expected, calculator.calculate(input));
     }
 
-
+    @Test
+    public void dynamicFibonacciCalculatorWorksCorrectly() {
+        FibonacciCalculator calculator = new DynamicFibonacciCalculator();
+        assertEquals(expected, calculator.calculate(input));
+    }
 }
